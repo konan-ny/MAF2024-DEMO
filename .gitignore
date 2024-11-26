@@ -9,3 +9,4 @@ MAF2024/*
 *.sqlite3
 *.lock
 *.txt
+!requirements.txt
