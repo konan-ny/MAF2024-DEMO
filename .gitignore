@@ -8,4 +8,4 @@ MAF2024/
 *.xlsx
 *.sqlite3
 *.lock
-manage.py
+*.txt
