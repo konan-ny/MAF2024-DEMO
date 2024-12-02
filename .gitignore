@@ -1,0 +1,12 @@
+MAF2024/*
+*.pyc
+*.log
+*.DS_STORE
+*.pt
+*.th
+*.csv
+*.xlsx
+*.sqlite3
+*.lock
+*.txt
+!requirements.txt
