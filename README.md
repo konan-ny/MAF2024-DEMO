@@ -41,38 +41,50 @@ MAF-DEMO에서는 총 4가지 type(tabular, image, text, audio)의 데이터와 
       export PYTHONPATH = '/workspace'
       #Django SECRET KEY 설정
       export DJANGO_SECRET_KEY = 'your_django_key'
-    ```
+     ```
 
 ## How to use
 ### 1. Data Type Selection
+<img src="https://github.com/user-attachments/assets/bbae9a75-b03e-418a-8126-b400743df5bc" alt="Data Type Select" style="width:70%; height:30%;">  
 
 데이터 타입 선택 화면입니다. MAF에서 지원하는 데이터 타입은 tabular, image, text, audio의 총 4가지입니다.
 데이터 타입을 선택하면 각 타입에 해당하는 상세 데이터 혹은 알고리즘을 선택할 수 있는 페이지로 이동합니다.
 
 ### 2. Data Selection
+<img src = "https://github.com/user-attachments/assets/30930ef6-9e96-41c0-8b02-4d59833fa041" alt="Data Select" style="width:70%; height:25%;">  
 
 데이터 선택 화면입니다. 각 데이터 타입 별로 알고리즘을 적용할 상세 데이터셋을 선택합니다.
 * Custom dataset 선택 시 제한사항
   * csv 파일만 업로드 가능하며, 데이터에는 Target, Bias 열이 반드시 하나씩 존재해야합니다.
 
-CHECK METRIC 버튼을 클릭할 경우, 데이터에 대한 T-SNE analysis, bias measure 및 SVM을 거친 이후의 bias measure를 확인할 수 있습니다.
-
-ALGORITHM SELECTION 버튼을 클릭할 경우, 편향성 완화 알고리즘을 선택화면으로 이동합니다.
+CHECK METRIC 버튼을 클릭 시, 데이터에 대한 T-SNE analysis, bias measure 및 SVM을 거친 이후의 bias measure를 확인할 수 있습니다.
+SELECT MITIGATION ALGORITHM 버튼을 클릭하면, 편향성 완화 알고리즘을 선택화면으로 이동합니다.
 
 #### CHECK METRIC
 ##### Data metrics
+<img src = "https://github.com/user-attachments/assets/cd4f1f9d-3e41-47bd-bca8-16ebd349d310" alt="Data metric" style="width:70%; height:25%;">
+<img src = "https://github.com/user-attachments/assets/2571e045-b75f-4092-9ca2-b3e5d713b67c" alt="t-SNE" style="width:70%; height:25%;">
 
 ##### Performance
+<img src = "https://github.com/user-attachments/assets/ba3e8a77-83d4-4985-ac37-d84491617475" alt="Performance metric" style="width:70%; height:25%;">
 
 ##### Classification metrics
+<img src = "https://github.com/user-attachments/assets/645f788d-c6b2-491f-b304-faade6c3e821" alt="Classification metric" style="width:70%; height:25%;">
 
 ### 3. Algorithm Selection
 편향성 완화 알고리즘 선택 화면입니다. ⓘ 버튼을 클릭하여 각 모델에 대한 간략한 설명을 확인할 수 있습니다.
 AIF360의 알고리즘과 컨소시엄에서 개발한 알고리즘을 포함하고 있으며, 지속적으로 업데이트를 진행하고 있습니다.
 
+<img src = "https://github.com/user-attachments/assets/68c8b584-28e8-4d0a-bdcf-42e4e07a386e" alt="Algorithm selection" style="width:70%; height:25%;">
+
 ### 4. Check Mitigated Result
 선택한 데이터와 알고리즘에 따른 결과를 확인할 수 있습니다.
 - Example
-  - Tabular data: <b>Compas</b>, Algorithm:
-  - Image data: <b>Pubfig</b>, Algorithm:
-  - Text Algorithm:
+  - Tabular data: <b>Compas</b>, Algorithm: <b>Disparate Impact Remover</b>
+  <img src = "https://github.com/user-attachments/assets/12756675-0b65-42aa-af62-086476600050" alt="Tabular example" style="width:70%; height:25%;">
+
+  - Image data: <b>Pubfig</b>, Algorithm: <b>Fair Feature Distillation</b>
+  <img src = "https://github.com/user-attachments/assets/ce767581-b7c9-4677-b60c-2c43e71d8a9e" alt="Image example" style="width:70%; height:25%;">
+
+  - Text Benchmark: <b>KoBBQ</b>
+  <img src = "https://github.com/user-attachments/assets/8ba6adf3-e00e-467e-9d9c-c01260478dc0" alt="Text example" style="width:70%; height:25%;">
